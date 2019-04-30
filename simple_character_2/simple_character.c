@@ -16,8 +16,8 @@ MODULE_VERSION("0.1");
 static int      major_number;
 static char     message[256];
 static char*    tempmess;
-static short    size_of_message;
-static int      numberOpens = 0;
+//static short    size_of_message;
+//static int      numberOpens = 0;
 static struct   class*  char_class;
 static struct   device* char_device;
 
@@ -101,7 +101,7 @@ static ssize_t dev_read(struct file *filep, char *buffer, size_t len, loff_t *of
     }
     maxsize = maxsize > len ? len : maxsize;
     printk(KERN_INFO "%s: Message = %s",__func__,message);
-    printk(KERN_INFO "%s: Maxsize = %d, Length = %u\n",maxsize,(unsigned int)len);
+    printk(KERN_INFO "%s: Maxsize = %d, Length = %u\n",__func__,maxsize,(unsigned int)len);
     // void __iomem *led_in_reg = ioremap(LED_IN, 4);
     //Doc tu thanh ghi nay de biet led sang hay tat
     // val = ioread32(led_in_reg);
@@ -121,10 +121,9 @@ static ssize_t dev_read(struct file *filep, char *buffer, size_t len, loff_t *of
 static ssize_t dev_write (struct file *filep, const char *buffer, size_t len, loff_t *offset)
 {
     // void __iomem *led_out_reg = ioremap(LED_OUT, 4);
-    
     // iowrite32(led_out_reg,val);
     memset(message,0,sizeof(message));
-    copy_to_user(message, buffer, len);
+    (void)(copy_to_user(message, buffer, len));
     // sprintf(message, "%s", buffer);
     printk(KERN_INFO "%s: Da ghi chuoi %s vao message\n",__func__,buffer);
 

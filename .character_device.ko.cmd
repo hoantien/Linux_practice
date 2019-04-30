@@ -1,0 +1,1 @@
+cmd_/root/Linux_practice/character_device.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /root/Linux_practice/character_device.ko /root/Linux_practice/character_device.o /root/Linux_practice/character_device.mod.o
