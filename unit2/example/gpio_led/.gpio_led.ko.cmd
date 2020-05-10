@@ -1,1 +1,0 @@
-cmd_/root/Linux_practice/unit2/example/gpio_led/gpio_led.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /root/Linux_practice/unit2/example/gpio_led/gpio_led.ko /root/Linux_practice/unit2/example/gpio_led/gpio_led.o /root/Linux_practice/unit2/example/gpio_led/gpio_led.mod.o

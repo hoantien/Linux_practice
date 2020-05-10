@@ -1,1 +1,0 @@
-cmd_/root/Linux_practice/unit3/ledcontrol/led_driver.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /root/Linux_practice/unit3/ledcontrol/led_driver.ko /root/Linux_practice/unit3/ledcontrol/led_driver.o /root/Linux_practice/unit3/ledcontrol/led_driver.mod.o

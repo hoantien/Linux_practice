@@ -1,1 +1,0 @@
-cmd_/root/Linux_practice/unit2/example/helloword/helloworld.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /root/Linux_practice/unit2/example/helloword/helloworld.ko /root/Linux_practice/unit2/example/helloword/helloworld.o /root/Linux_practice/unit2/example/helloword/helloworld.mod.o
